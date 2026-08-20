@@ -1,72 +1,65 @@
-// FomeJá — exercício de seleção de elementos no DOM
-// Abra o DevTools (F12) > aba Console para conferir cada desafio.
+// Exercício — De HTML Fixo para App FomeJá
+// Você deverá transformar uma página estática do FomeJá em uma aplicação dinâmica utilizando JavaScript.
 
-// ---------------------------------------------
-// 1. getElementById
-// O título da tela precisa mostrar que os restaurantes
-// estão abertos agora. Selecione #titulo-app e troque
-// o texto para "FomeJá — abertos agora".
-// ---------------------------------------------
+// 1. Categorias
+// Implemente a interação dos botões de categoria:
 
+// Ao clicar em um botão de categoria, somente ele deve receber a classe ativa.
 
+// Os demais botões devem perder essa classe.
 
-// ---------------------------------------------
-// 2. getElementById
-// O campo de busca veio com um placeholder genérico.
-// Selecione #busca e altere o placeholder para
-// "Pizza, açaí, hambúrguer...".
-// ---------------------------------------------
+// A classe ativa já está definida no arquivo CSS e deve ser reutilizada.
+const resultado = document.getElementById("resultado");
+const categorias = document.querySelectorAll(".categoria");
+categorias.
+categorias.forEach((el) => {
+    i
+} )
 
+console.log(resultado);
+console.log(categorias);
 
+// 2. Pedidos
+// Implemente a interação dos cards e botões de pedido:
 
-// ---------------------------------------------
-// 3. getElementsByClassName
-// O time de produto quer saber quantos restaurantes
-// aparecem na listagem. Selecione todos os cards com
-// a classe restaurante-card e mostre a quantidade
-// no console.
-// ---------------------------------------------
+// Crie, no CSS, a classe .pedido-ativo, utilizando uma borda verde e um fundo claro.
 
+// No JavaScript, o card clicado deve receber a classe .pedido-ativo.
 
+// O card selecionado anteriormente deve perder essa classe.
 
-// ---------------------------------------------
-// 4. getElementsByTagName
-// Quantos botões "Pedir" existem na página?
-// Selecione todas as tags button e mostre o total
-// no console. (Vai incluir os botões de categoria também.)
-// ---------------------------------------------
+// O botão clicado deve alterar seu estilo, utilizando fundo verde e o texto "Pedido!".
 
+// O elemento de resultado deve ser preenchido utilizando innerHTML, com uma mensagem como: "Pedido enviado para Burger Lab!".
 
+// 3. Técnicas obrigatórias
+// A implementação deve utilizar obrigatoriamente:
 
-// ---------------------------------------------
-// 5. querySelector
-// Selecione APENAS o primeiro restaurante da lista
-// e mostre o nome dele no console.
-// Dica: o nome está em .nome-restaurante
-// ---------------------------------------------
+// addEventListener para escutar os cliques.
 
+// classList para adicionar e remover classes.
 
+// style para alterar pelo menos uma propriedade CSS.
 
-// ---------------------------------------------
-// 6. querySelector
-// Existe um restaurante em promoção, com id="promocao".
-// Selecione esse card e mostre o nome no console.
-// ---------------------------------------------
+// innerHTML para montar a mensagem do pedido.
 
+// Objetivo
+// Praticar a manipulação do DOM, o gerenciamento de classes CSS, a criação de interações com eventos de clique e a atualização dinâmica do conteúdo de uma página HTML.
 
+// // Exemplo: assim você encontra elementos na tela
 
-// ---------------------------------------------
-// 7. querySelectorAll
-// Percorra TODOS os restaurantes e imprima o nome
-// de cada um no console, um por linha.
-// Use forEach.
-// ---------------------------------------------
+// const resultado = document.getElementById("resultado");
+// const categorias = document.querySelectorAll(".categoria");
 
+// console.log(resultado);
+// console.log(categorias);
 
+// // Agora selecione os botões Pedir e continue o desafio
+// //
+// // Dica:
+// // 1. Percorra as categorias com forEach e use addEventListener("click")
+// // 2. No clique, tire a classe "ativa" de quem já tem e coloque no botão clicado
+// // 3. Faça o mesmo com os botões Pedir
+// // 4. No clique em Pedir: destaque o card (classList), mude o botão (style)
+// //    e escreva a mensagem em #resultado (innerHTML)
 
-// ---------------------------------------------
-// 8. Desafio final (opcional)
-// Atualize o parágrafo #resultado com um resumo, por exemplo:
-// "6 restaurantes encontrados. Promoção: Pizza da Esquina"
-// Use os elementos que você já selecionou acima.
-// ---------------------------------------------

@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "language": "pt-BR,en",
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "locale": "pt-BR,en"
+    }
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/coverage/**"
+  ]
+}
