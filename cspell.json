@@ -12,5 +12,8 @@
     "**/dist/**",
     "**/build/**",
     "**/coverage/**"
+  ],
+  "words": [
+    "botao"
   ]
 }
