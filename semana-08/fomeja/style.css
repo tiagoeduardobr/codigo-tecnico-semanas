@@ -156,3 +156,8 @@ body {
 code {
   font-size: 12px;
 }
+
+.pedido-ativo {
+  border: 1px solid;
+  border-color: #7ff687;
+}
