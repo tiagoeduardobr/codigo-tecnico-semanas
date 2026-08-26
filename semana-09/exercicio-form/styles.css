@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+}
+
+main {
+    width: 700px;
+    margin: 30px auto;
+    position: relative;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px;
+}
+
+input, select, button {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input, select {
+    border: 1px solid #cbd5e1;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    border-color: #2563eb;
+    background-color: #fff;
+}
+
+input:hover,
+select:hover {
+    border-color: #93c5fd;
+    background: #ffffff;
+}
+
+
+
