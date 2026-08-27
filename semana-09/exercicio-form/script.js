@@ -29,8 +29,6 @@ formulario.addEventListener("submit", (event) => {
     .querySelectorAll('input[name="temas"]:checked')
     .forEach((tema) => temas.push(tema.value));
 
-  console.log(temas);
-
   const nivel = document.querySelector("input[name='nivel']:checked").value;
 
   const dados = {
@@ -51,7 +49,7 @@ formulario.addEventListener("submit", (event) => {
     <p><strong>E-mail:</strong> ${dados.email}</p>
     <p><strong>Senha:</strong> ${dados.senha}</p>
     <p><strong>Idade:</strong> ${dados.idade}</p>
-    <p><strong>Data de nascimento:</strong> ${dados.nascimento}</p>
+    <p><strong>Data de nascimento:</strong> ${new Date(dados.nascimento).toLocaleDateString("pt-BR")}</p>
     <p><strong>Trilha:</strong> ${dados.trilha}</p>
     <p><strong>Nível:</strong> ${dados.nivel}</p>
     <p><strong>Temas:</strong> ${dados.temas.length > 0 ? dados.temas.join(", ") : "Nenhum Informado"}</p>
