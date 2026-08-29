@@ -23,18 +23,61 @@ trilhas.forEach((opcao) => {
 formulario.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const nivel = document.querySelector("input[name='nivel']:checked").value;
+  const senha = document.getElementById("senha");
+  const apresentacao = document.getElementById("apresentacao");
+
+  const inputErrors = document.querySelectorAll("input-error");
+  inputErrors.forEach((el) => el.classList.remove("input-error"));
+
   const temas = [];
 
   document
     .querySelectorAll('input[name="temas"]:checked')
     .forEach((tema) => temas.push(tema.value));
 
-  const nivel = document.querySelector("input[name='nivel']:checked").value;
+  const possuiNumero = /\d/.test(senha.value);
+
+  const erros = [];
+
+  if (senha.value.length < 8 || !possuiNumero) {
+    erros.push({
+      campo: senha,
+      mensagem: "A senha dever ter pelo menos 8 caracteres e um numero",
+    });
+  }
+
+  if (temas.length === 0) {
+    erros.push({
+      campo: document.getElementById("checkboxes"),
+      mensagem: "Selecione pelo menos um tema de interesse",
+    });
+  }
+
+  if (apresentacao.value.trim().length < 20) {
+    erros.push({
+      campo: apresentacao,
+      mensagem: "Apresentação deve ter pelo menos 20 caracteres",
+    });
+  }
+
+  console.log(erros);
+
+  if (erros.length > 0) {
+    erros.forEach((el) => {
+      el.campo.classList.add("input-error");
+      const mensagem = document.createElement("span");
+      mensagem.className = "mensagem-erro";
+      mensagem.textContent = el.mensagem;
+      const elementoMensagem = el.campo.closest("fieldset") || el.campo;
+      elementoMensagem.after(mensagem);
+    });
+  }
 
   const dados = {
     nome: document.getElementById("name").value,
     email: document.getElementById("email").value,
-    senha: document.getElementById("senha").value,
+    senha: senha.value,
     idade: document.getElementById("age").value,
     nascimento: document.getElementById("nascimento").value,
     trilha: document.getElementById("trilha").value,
