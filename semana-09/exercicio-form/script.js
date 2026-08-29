@@ -23,45 +23,56 @@ trilhas.forEach((opcao) => {
 formulario.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const nivel = document.querySelector("input[name='nivel']:checked").value;
-  const senha = document.getElementById("senha");
-  const apresentacao = document.getElementById("apresentacao");
+  const dadosFormulario = new FormData(formulario);
 
-  const inputErrors = document.querySelectorAll("input-error");
-  inputErrors.forEach((el) => el.classList.remove("input-error"));
+  const nome = dadosFormulario.get("nome");
+  const email = dadosFormulario.get("email");
+  const senha = dadosFormulario.get("senha");
+  const idade = dadosFormulario.get("idade");
+  const nascimento = dadosFormulario.get("nascimento");
+  const trilhaSelecionada = dadosFormulario.get("trilha");
+  const nivel = dadosFormulario.get("nivel");
+  const apresentacao = dadosFormulario.get("apresentacao");
+  const temas = dadosFormulario.getAll("temas");
 
-  const temas = [];
+  document.querySelectorAll(".input-error").forEach((campo) => {
+    campo.classList.remove("input-error");
+  });
 
-  document
-    .querySelectorAll('input[name="temas"]:checked')
-    .forEach((tema) => temas.push(tema.value));
-
-  const possuiNumero = /\d/.test(senha.value);
+  document.querySelectorAll(".mensagem-erro").forEach((mensagem) => {
+    mensagem.remove();
+  });
 
   const erros = [];
+  const possuiNumero = /\d/.test(senha);
 
-  if (senha.value.length < 8 || !possuiNumero) {
+  if (senha.length < 8) {
     erros.push({
-      campo: senha,
-      mensagem: "A senha dever ter pelo menos 8 caracteres e um numero",
+      campo: document.getElementById("senha"),
+      mensagem: "A senha deve ter pelo menos 8 caracteres.",
+    });
+  }
+
+  if (!possuiNumero) {
+    erros.push({
+      campo: document.getElementById("senha"),
+      mensagem: "A senha deve conter pelo menos um número.",
     });
   }
 
   if (temas.length === 0) {
     erros.push({
-      campo: document.getElementById("checkboxes"),
-      mensagem: "Selecione pelo menos um tema de interesse",
+      campo: document.querySelector('input[name="temas"]'),
+      mensagem: "Selecione pelo menos um tema de interesse.",
     });
   }
 
-  if (apresentacao.value.trim().length < 20) {
+  if (apresentacao.trim().length < 20) {
     erros.push({
-      campo: apresentacao,
-      mensagem: "Apresentação deve ter pelo menos 20 caracteres",
+      campo: document.getElementById("apresentacao"),
+      mensagem: "A apresentação deve ter pelo menos 20 caracteres.",
     });
   }
-
-  console.log(erros);
 
   if (erros.length > 0) {
     erros.forEach((el) => {
@@ -72,18 +83,20 @@ formulario.addEventListener("submit", (event) => {
       const elementoMensagem = el.campo.closest("fieldset") || el.campo;
       elementoMensagem.after(mensagem);
     });
+
+    return;
   }
 
   const dados = {
-    nome: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    senha: senha.value,
-    idade: document.getElementById("age").value,
-    nascimento: document.getElementById("nascimento").value,
-    trilha: document.getElementById("trilha").value,
-    nivel: nivel ? nivel : "Não informado",
-    temas: temas,
-    apresentacao: document.getElementById("apresentacao").value,
+    nome,
+    email,
+    senha,
+    idade,
+    nascimento,
+    trilha: trilhaSelecionada,
+    nivel,
+    temas,
+    apresentacao,
   };
 
   resumo.innerHTML = `

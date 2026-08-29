@@ -101,4 +101,13 @@ button:hover {
     background-color: #0e7490;
 }
 
+.input-error {
+    border: 1px solid;
+    border-color: red;
+}
+
+.mensagem-erro {
+    color: red
+}
+
 
