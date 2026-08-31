@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f1ea;
+  color: #243038;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cabeçalho */
+.topo {
+  width: 1280px;
+  background-color: #1b3a4b;
+  color: #f4f1ea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.marca {
+  font-size: 22px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  font-size: 15px;
+  padding: 10px 22px;
+  color: #e6ddd0;
+}
+
+.menu a:hover {
+  color: #d4b45a;
+}
+
+/* Banner */
+.hero {
+  width: 1400px;
+  background-color: #1b3a4b;
+}
+
+.hero img {
+  width: 1400px;
+  height: 480px;
+}
+
+.hero-texto {
+  width: 1400px;
+  padding: 48px 56px;
+  background-color: #1b3a4b;
+  color: #f7f3ea;
+}
+
+.selo {
+  font-size: 13px;
+  color: #d4b45a;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  width: 820px;
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.hero-resumo {
+  width: 640px;
+  font-size: 18px;
+  color: #d9d0c3;
+  margin-bottom: 28px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #d4b45a;
+  color: #1b3a4b;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 28px;
+}
+
+.botao:hover {
+  background-color: #e2c56f;
+}
+
+/* Serviços */
+.servicos {
+  width: 1200px;
+  padding: 64px 0 24px 48px;
+}
+
+.servicos h2,
+.sobre h2,
+.equipe h2 {
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+.servicos-lista {
+  display: flex;
+}
+
+.cartao {
+  width: 360px;
+  margin-right: 28px;
+  background-color: #ffffff;
+  padding: 28px;
+  border-top: 4px solid #d4b45a;
+}
+
+.cartao h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.cartao p {
+  font-size: 16px;
+}
+
+/* Sobre */
+.sobre {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 48px 0 48px 48px;
+}
+
+.sobre-texto {
+  width: 560px;
+  margin-right: 40px;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.sobre-foto {
+  width: 520px;
+  height: 340px;
+}
+
+/* Equipe */
+.equipe {
+  width: 1200px;
+  padding: 24px 0 64px 48px;
+}
+
+.equipe-lista {
+  display: flex;
+}
+
+.pessoa {
+  width: 280px;
+  margin-right: 32px;
+  background-color: #ffffff;
+  padding: 24px;
+  text-align: center;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  background-color: #1b3a4b;
+  color: #d4b45a;
+  font-size: 20px;
+  padding-top: 24px;
+}
+
+.pessoa h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.pessoa p {
+  font-size: 14px;
+  color: #5a6a72;
+}
+
+/* Rodapé */
+.rodape {
+  width: 1280px;
+  background-color: #142833;
+  color: #d9d0c3;
+  padding: 36px 48px;
+  font-size: 14px;
+}
+
+.rodape .marca {
+  color: #f4f1ea;
+  margin-bottom: 8px;
+}
