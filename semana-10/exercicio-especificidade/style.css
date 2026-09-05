@@ -129,15 +129,8 @@ p {
   padding: 20px 24px 4px;
 }
 
-#titulo {
-  color: green;
-}
 
 /* Bug 2 — o botão. A regra azul está por último. Isso basta? */
-.card .botao {
-  background: red;
-}
-
 .botao {
   background: blue;
 }
