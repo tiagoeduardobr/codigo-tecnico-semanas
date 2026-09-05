@@ -202,3 +202,71 @@ a {
   color: #f4f1ea;
   margin-bottom: 8px;
 }
+
+/* ============================================
+   GABARITO — adicionar a partir daqui
+   ============================================ */
+
+.topo,
+.hero,
+.hero img,
+.hero-texto,
+.hero h1,
+.hero-resumo,
+.servicos,
+.sobre,
+.equipe,
+.rodape,
+.cartao,
+.sobre-texto,
+.sobre-foto,
+.pessoa {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero img,
+.sobre-foto {
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-texto,
+  .servicos,
+  .sobre,
+  .equipe,
+  .rodape {
+    padding: 24px 16px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .servicos-lista,
+  .sobre,
+  .equipe-lista {
+    flex-direction: column;
+  }
+
+  .cartao,
+  .pessoa {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .sobre-texto {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
