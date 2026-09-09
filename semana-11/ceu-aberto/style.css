@@ -83,6 +83,62 @@ h2 {
   font-size: 1.4rem;
 }
 
+.campo-cidade {
+  display: block;
+  margin: 16px 0 8px;
+  color: #5b7384;
+  font-size: 0.85rem;
+}
+
+#cidade {
+  padding: 8px 12px;
+  border: 1px solid #d3e4f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #1d2b38;
+  font-size: 1rem;
+}
+
+.agora-cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.agora-cabecalho h2 {
+  margin-bottom: 0;
+}
+
+.unidade-toggle {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #d3e4f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.unidade-toggle button {
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  color: #4a6070;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.unidade-toggle button + button {
+  border-left: 1px solid #d3e4f0;
+}
+
+.unidade-toggle button.ativa {
+  background: #2d6a93;
+  color: #fff;
+}
+
 .agora-painel {
   background: #fff;
   border: 1px solid #d3e4f0;
